@@ -6,7 +6,7 @@ require_once("OpShare.php");
 
 class Calculator
 {
-    private $op_array = ["OpAdd"=>'+',"OpSubtrac"=>'-',"OpShare"=>'/',"OpMultiply"=>'*'];
+    private $op_array = ['+','-','/','*'];
     private $operation;
     private $first_number;
     private $second_number;
@@ -23,8 +23,22 @@ class Calculator
     public function calculate()
     {
         $this->getOperation();
-        $opClass = key($this->op_symbol[$opClass]);
-        return new $opClass;
+        switch ($this->op_symbol) {
+            case "+";
+                $result = new OpAddy->calculate($this->first_number, $this->second_number);
+                break;
+            case "-";
+                $result = new OpSubtracy->calculate($this->first_number, $this->second_number);
+                break;
+            case "/";
+                $result = new OpSharey->calculate($this->first_number, $this->second_number);
+                break;
+            case "*";
+                $result = new OpMultiply->calculate($this->first_number, $this->second_number);
+                break;
+        }
+        var_dump($result);die;
+        return $result;
     }
 
     private function getOperation()

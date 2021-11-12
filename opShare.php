@@ -10,10 +10,10 @@ class OpShare
         $this->first_number  = $numb1;
         $this->second_number = $numb2;
     }
-    public function calculate()
+    public function calculate(float $numb1, float $numb2)
     {
-        if($b == 0) throw new InvalidArgumentException('Não é possível dividir por 0!');
+        if($numb2 == 0) throw new InvalidArgumentException('Não é possível dividir por 0!');
 
-        return $a / $b;
+        return  $numb1 / $numb2;
     }
 }
