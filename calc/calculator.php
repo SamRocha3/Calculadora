@@ -28,10 +28,10 @@ class Calculator
                 $result = (new OpAdd($this->first_number, $this->second_number))->calculate();
                 break;
             case "-";
-                $result = (new OpSubtracy($this->first_number, $this->second_number))->calculate();
+                $result = (new OpSubtract($this->first_number, $this->second_number))->calculate();
                 break;
             case "/";
-                $result = (new OpSharey($this->first_number, $this->second_number))->calculate();
+                $result = (new OpShare($this->first_number, $this->second_number))->calculate();
                 break;
             case "*";
                 $result = (new OpMultiply($this->first_number, $this->second_number))->calculate();

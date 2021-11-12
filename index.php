@@ -1,6 +1,6 @@
 <?php
 
-require_once("calculator.php");
+require_once("calc/calculator.php");
 
 $numb1 = readline("Qual o primeiro número:");
 $numb2 = readline("Qual o segundo número:");
