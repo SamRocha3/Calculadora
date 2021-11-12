@@ -1,6 +1,6 @@
 <?php
 
-class OpSubtrac
+class OpSubtract
 {
     private $first_number;
     private $second_number;
