@@ -25,19 +25,18 @@ class Calculator
         $this->getOperation();
         switch ($this->op_symbol) {
             case "+";
-                $result = new OpAddy->calculate($this->first_number, $this->second_number);
+                $result = (new OpAdd($this->first_number, $this->second_number))->calculate();
                 break;
             case "-";
-                $result = new OpSubtracy->calculate($this->first_number, $this->second_number);
+                $result = (new OpSubtracy($this->first_number, $this->second_number))->calculate();
                 break;
             case "/";
-                $result = new OpSharey->calculate($this->first_number, $this->second_number);
+                $result = (new OpSharey($this->first_number, $this->second_number))->calculate();
                 break;
             case "*";
-                $result = new OpMultiply->calculate($this->first_number, $this->second_number);
+                $result = (new OpMultiply($this->first_number, $this->second_number))->calculate();
                 break;
         }
-        var_dump($result);die;
         return $result;
     }
 

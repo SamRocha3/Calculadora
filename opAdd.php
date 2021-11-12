@@ -10,8 +10,8 @@ class OpAdd
         $this->first_number  = $numb1;
         $this->second_number = $numb2;
     }
-    public function calculate(float $numb1, float $numb2)
+    public function calculate()
     {
-        return $numb1 + $numb2;
+        return $this->first_number + $this->second_number;
     }
 }
